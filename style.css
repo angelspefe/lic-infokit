@@ -1,0 +1,30 @@
+/*----------- CSS Reset -----------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/*----------- Universal Styles -----------*/
+/* Eg padding on your sections, utility classes, etc. */
+
+.padded {
+  padding: 8%;
+}
+
+/*----------- Typography -----------*/
+
+header, footer, section {
+  padding: 2%;
+  border: 1px solid #666666;
+  background-color:grey;
+}
+
+div {
+  background-color:white;
+}
+
+.line{
+  border:1px solid red;
+}
