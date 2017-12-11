@@ -21,7 +21,7 @@ body {
 }
 
 .padded-bottom {
-  padding-bottom:5%
+  padding-bottom:10%;
 }
 
 section, header, footer {
@@ -201,13 +201,28 @@ form input[type="submit"] {
   font-size:1em;
   color:#000000;
   background:none;
-
+  padding:0.2rem;
+  border: 0px;
 }
 
-form input {
+form input,
+form textarea {
   border-bottom:0.5px solid #000000;
+  margin-bottom: 0.2rem;
 }
 
 form textarea {
   min-height:20vh;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+ width:auto;
+}
+
+form p {
+  line-height:0;
+}
+form input[type="submit"] {
+  padding-top:10%;
 }
