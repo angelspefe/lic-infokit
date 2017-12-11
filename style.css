@@ -6,25 +6,208 @@
   box-sizing:border-box;
 }
 
+[class*=grid-], [class*=grid_], [class~=grid]{
+  margin:0;
+}
+
 /*----------- Universal Styles -----------*/
 /* Eg padding on your sections, utility classes, etc. */
 
-.padded {
-  padding: 8%;
+body {
 }
 
-/*----------- Typography -----------*/
+.padded {
+  padding:5%
+}
 
-header, footer, section {
-  padding: 2%;
-  border: 1px solid #666666;
-  background-color:grey;
+.padded-bottom {
+  padding-bottom:5%
+}
+
+section, header, footer {
+  border: 0px solid orange;
+  padding: 15% 10% 10% 230px;
+}
+
+header {
+  background-image: url(images/banner.jpg);
+  padding-top: 15vh;
+  background-size: cover;
+  padding-bottom:0;
 }
 
 div {
-  background-color:white;
+  border:0px solid #eeee;
 }
 
 .line{
-  border:1px solid red;
+  border:0.5px solid black;
+  padding: 0;
+}
+
+a{
+  padding:5%;
+  display: block;
+}
+
+.bg-image {
+  background-image: url('images/bg-image.jpg');
+  background-position:center;
+  background-size:cover;
+}
+
+.bg-color {
+  background-image: url('images/bg-color.png');
+  background-position:right top;
+  background-size:cover;
+}
+
+.relative{
+  position:relative;
+}
+
+.absolute{
+  position:absolute;
+}
+
+header div {
+  background-color:#ffffff;
+}
+
+.bg-grey {
+  background-color:#d8d8d8;
+}
+
+
+
+/*----------- Typography -----------*/
+
+p, h1, h2, h3, h4, h5, li {
+  color: #000000;
+  padding-bottom:0.5rem;
+}
+
+p, h4, li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h5, a, .quote p {
+  font-family: 'Crimson Text', serif;
+  font-weight: 300;
+  line-height: 1;
+}
+
+p, li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 400;
+  list-style-position: inside
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom:5%;
+  padding-right:20%;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  padding-bottom:5%
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size:0.9rem;
+}
+
+h5 {
+  color:#D8D8D8;
+  font-size: 11rem;
+}
+
+a {
+  color: #000000;
+  text-decoration:none;
+}
+
+a:hover {
+}
+
+.icon{
+  max-width:60px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.services-section h4 {
+  padding-top:1.6rem;
+}
+
+/*----------- Sidebar -----------*/
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 15vh;
+    padding: 2%;
+    background-color: #FFF08E;
+    width:180px;
+}
+
+/*----------- Header -----------*/
+
+
+
+/*----------- Testimonial -----------*/
+.quote {
+  padding: 5% 0 5% 200px;
+  background-color: #ECECEC;
+}
+
+.quote p {
+  padding-bottom:5%;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color:#000000;
+}
+
+.quote-mark {
+  font-size: 5rem;
+  color:#000000;
+}
+
+.testimonial p {
+  font-family: 'Open Sans', sans-serif;
+  text-transform:uppercase;
+  font-weight:700;
+  padding-top:5%;
+}
+
+
+/*----------- Form -----------*/
+
+form input,
+form label,
+form textarea,
+form p,
+form input[type="submit"] {
+  font-family: 'Crimson Text', serif;
+  width:100%;
+  font-size:1em;
+  color:#000000;
+  background:none;
+
+}
+
+form input {
+  border-bottom:0.5px solid #000000;
+}
+
+form textarea {
+  min-height:20vh;
 }
