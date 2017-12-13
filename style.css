@@ -225,7 +225,7 @@ a {
 }
 
 .sidebar h4 {
-  position: absolute
+  position: absolute;
   top:7vh;
   right:2vw;
   transform: rotate(90deg);
