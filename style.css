@@ -15,7 +15,7 @@
 
 /*----------- sections -----------*/
 section, header, footer {
-  padding: 15% 0 10% 220px;
+  padding: 15% 0 5% 220px;
 }
 
 header {
@@ -23,14 +23,16 @@ header {
   padding-bottom:0;
 }
 
-div {
-  border:0px solid #eeee;
-}
-
 a{
   padding:5%;
   display:inline-block;
+  width: 14rem;
 }
+
+.mob-show {
+  display:none;
+}
+
 
 /*----------- paddings & positionings -----------*/
 .padded {
@@ -39,6 +41,14 @@ a{
 
 .padded-bottom {
   padding-bottom:10%;
+}
+
+.faq h2 {
+  padding: 10% 0 0 10%;
+}
+
+.services-section h4 {
+  padding-top:1.6rem;
 }
 
 .line{
@@ -58,9 +68,6 @@ a{
   text-align: center;
 }
 
-.services-section h4 {
-  padding-top:1.6rem;
-}
 
 /*----------- backgrounds -----------*/
 
@@ -68,27 +75,30 @@ header div, .faq div {
   background-color:#ffffff;
 }
 
+
+.bg-image,
+.bg-color,
+.bg-color-right,
+.bg-color-high {
+  background-size:cover;
+}
+
 .bg-image {
   background-image: url('images/bg-image.jpg');
   background-position:center;
-  background-size:cover;
 }
 
 .bg-color {
   background-image: url('images/bg-color.png');
-  background-size:cover;
 }
 
 .bg-color-right {
   background-image: url('images/bg-color-right.png');
-  background-position:right top;
-  background-size:cover;
 }
 
 .bg-color-high {
   background-image: url('images/bg-color-high.png');
   background-position:right top;
-  background-size:cover;
 }
 
 /*----------- elements -----------*/
@@ -106,8 +116,10 @@ header div, .faq div {
   max-width:60px;
 }
 
-.button {
+.button {                 /* >> these are the buttons with yellow line in the background */
   position: relative;
+  cursor: pointer;
+  width:15rem;
 }
 .button:after {
   background-color: #fff08ea3;
@@ -118,7 +130,6 @@ header div, .faq div {
   margin: auto 0;
   position: absolute;
   top: 0;
-  transition: width 1s;
   left: 50%;
   width: 70%;
   transform: translateX(-50%);
@@ -149,7 +160,10 @@ p, li {
   font-size: 0.9rem;
   line-height: 1.5;
   font-weight: 400;
-  list-style-position: inside
+}
+
+li {
+  margin-left:1.5rem;
 }
 
 h1 {
@@ -183,20 +197,20 @@ a {
   font-size:1.1rem;
 }
 
-.faq h2 {
-  padding: 10% 0 0 10%;
-}
-
 
 /*----------- Sidebar -----------*/
+
+.mob-nav {
+  display:none;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
   top: 15vh;
-  padding: 2%;
+  padding: 20% 2% 2% 2%;
   background-color: #FFF08E;
   width:180px;
-  padding-top:25%;
 }
 
 .sidebar li {
@@ -204,19 +218,21 @@ a {
   padding-left:10%;
 }
 
+.sidebar a:hover {
+  font-weight:700;
+}
+
 .sidebar h4 {
+  position: absolute
   top:7vh;
   right:2vw;
   transform: rotate(90deg);
-  top: 7vh;
-  right: 2vw;
-  position: absolute
 }
 
 .sidebar img {
+  position: absolute;
   width: 70%;
   top: -6vh;
-  position: absolute;
   padding-left: 10px
 }
 
@@ -225,7 +241,6 @@ a {
   padding: 5% 0 5% 200px;
   background-color: #eee;
   color:#000000;
-
 }
 
 .quote p {
@@ -247,7 +262,6 @@ p.testimonial {
   font-size:0.9em;
 }
 
-
 /*----------- Form -----------*/
 
 form input,
@@ -257,19 +271,19 @@ form p,
 form input[type="submit"],
 button {
   font-family: 'Crimson Text', serif;
-  width:100%;
   font-size:1em;
   color:#000000;
+  width:100%;
   background:none;
   padding:0.2rem;
   border: 0px;
 }
 
 button {
+  display: block;
   width: auto;
   margin: auto;
-  display: block;
-  padding-top:10%;
+  margin-top:10%;
 }
 
 form input,
@@ -282,20 +296,22 @@ form textarea {
   min-height:20vh;
 }
 
+form p {
+  line-height:0;
+}
+
 form input[type="checkbox"],
 form input[type="radio"] {
  width:auto;
  margin-right: 10px
 }
 
-form p {
-  line-height:0;
-}
 form input[type="submit"] {
   padding-top:10%;
   text-transform:lowercase;
 }
 
+/* this is the color of the placeholders for each browser */
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000;
 }
@@ -318,3 +334,124 @@ width: 100px;
 
 
 /*----------- Media Queries -----------*/
+
+@media(max-width:768px){
+
+.mob-hide {
+  display:none;
+}
+
+.mob-show {
+  display:block;
+  height:
+}
+
+.mob-reverse {
+  flex-direction: column-reverse;
+}
+
+h1 {
+  font-size:2rem;
+  padding: 3% 0 10% 3%;
+}
+
+/* navigation */
+.mob-nav {
+  display:block;
+  padding:10%;
+  position: fixed;
+  padding: 3% 0 3% 10%;
+  background-color:#fff;
+  overflow: hidden;
+  z-index:2;
+  width:100%;
+}
+
+.mob-nav a, .mob-hide h1 {
+  padding: 0;
+}
+
+.mob-nav img {
+  width: 60%;
+}
+
+.mob-nav nav {
+display:none;
+}
+
+/* paddings */
+.padded-10 {
+  padding:10%;
+}
+
+section, header, footer, .quote {
+  padding: 10%;
+}
+
+.bump-top {
+  padding-top:40%;
+}
+
+/* bakgrounds */
+.bg-mob-grey {
+  background-color:#eee;
+}
+
+.bg-color,
+.bg-color-right,
+.bg-color-high
+{
+  background-image: none;
+}
+
+.featured {
+  border-bottom:4px solid #eee;
+  margin-bottom:10%;
+}
+
+/* testimonial */
+.quote {
+  background-color: #FFF08E;
+  padding:20% 10% 10%;
+}
+
+.quote p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-bottom:2rem;
+}
+
+.quote-mark {
+  font-size: 3rem;
+}
+
+p.testimonial {
+  font-size:0.8em;
+  padding-bottom:1rem;
+}
+
+/* form */
+form input,
+form textarea {
+  background-color:#fff;
+  border:0px;
+  color: #eee
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
+
+
+} /* this closes the media query */
