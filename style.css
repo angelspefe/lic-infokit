@@ -26,7 +26,6 @@ header {
 a{
   padding:5%;
   display:inline-block;
-  width: 14rem;
 }
 
 .mob-show {
@@ -119,7 +118,6 @@ header div, .faq div {
 .button {                 /* >> these are the buttons with yellow line in the background */
   position: relative;
   cursor: pointer;
-  width:15rem;
 }
 .button:after {
   background-color: #fff08ea3;
@@ -136,6 +134,10 @@ header div, .faq div {
 }
 .button:hover:after {
   width: 0;
+}
+
+.long-button  {
+width: 15rem;
 }
 
 
@@ -335,6 +337,37 @@ width: 100px;
 
 /*----------- Media Queries -----------*/
 
+@media(max-width:950px){
+
+  .mob-show {
+    display:block;
+  }
+
+  form input,
+  form textarea {
+    background-color:#fff;
+    border:0px;
+    color: #eee
+  }
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+      color:    #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    #fff;
+     opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    #fff;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+     color:    #fff;
+  }
+
+
+}
+
 @media(max-width:768px){
 
 .mob-hide {
@@ -343,7 +376,6 @@ width: 100px;
 
 .mob-show {
   display:block;
-  height:
 }
 
 .mob-reverse {
