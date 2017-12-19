@@ -118,6 +118,7 @@ header div, .faq div {
 .button {                 /* >> these are the buttons with yellow line in the background */
   position: relative;
   cursor: pointer;
+  padding:2%;
 }
 .button:after {
   background-color: #fff08ea3;
