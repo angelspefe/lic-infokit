@@ -405,7 +405,7 @@ h1 {
 }
 
 .mob-nav img {
-  width: auto;
+  width: 100%;
   max-width: 50vw;
 }
 
